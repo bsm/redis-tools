@@ -119,7 +119,7 @@ module RedisTools
         node.pos = num_masters+master.pos.to_i
         node.slaveof = master.code
       end
-      sort_by! {|n| n.pos }
+      sort_by! {|n| n.pos.to_i }
     end
 
   end
